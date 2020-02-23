@@ -31,6 +31,13 @@ namespace Program02
 
             Console.WriteLine($"The Number {number} is found first at position [{pos.row + 1},{pos.col + 1}]");
 
+            //this is for checking backwards
+            Position posB = new Position();
+            posB = SearchNumberBackwards(matrix, number);
+
+            Console.WriteLine($"The Number {number} is found last at position [{posB.row + 1},{posB.col + 1}]");
+
+
         }
         void InitMatrixRandom(int[,] matrix, int min, int max)
         {
@@ -82,9 +89,10 @@ namespace Program02
         {
             Position pos = new Position();
             //bool found = false;
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            //-- to check backwards?
+            for (int i = 0; i < matrix.GetLength(0); i--)
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int j = 0; j < matrix.GetLength(1); j--)
                 {
                     if (matrix[i, j] == number)//if the number is found
                     {
