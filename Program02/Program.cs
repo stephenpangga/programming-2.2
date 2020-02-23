@@ -91,7 +91,6 @@ namespace Program02
             //bool found = false;
             //-- to check backwards?
             //idea came from here:https://docs.microsoft.com/en-us/dotnet/api/system.array.reverse?view=netframework-4.8
-
             for (int i = matrix.GetLength(0)-1; i>=0; i--)
             {
                 for (int j = matrix.GetLength(1)-1; j>=0; j--)
