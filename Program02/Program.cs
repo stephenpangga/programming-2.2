@@ -90,9 +90,11 @@ namespace Program02
             Position pos = new Position();
             //bool found = false;
             //-- to check backwards?
-            for (int i = 0; i < matrix.GetLength(0); i--)
+            //idea came from here:https://docs.microsoft.com/en-us/dotnet/api/system.array.reverse?view=netframework-4.8
+
+            for (int i = matrix.GetLength(0)-1; i>=0; i--)
             {
-                for (int j = 0; j < matrix.GetLength(1); j--)
+                for (int j = matrix.GetLength(1)-1; j>=0; j--)
                 {
                     if (matrix[i, j] == number)//if the number is found
                     {
