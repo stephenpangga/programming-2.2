@@ -73,5 +73,10 @@ namespace Program03
             }
         }
         //still need to do question e and f
+        bool ScoreRowPresent(RegularCandies[,] matrix)
+        {
+            int count = 1;
+            return true;
+        }
     }
 }
